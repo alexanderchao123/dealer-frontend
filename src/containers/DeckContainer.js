@@ -4,7 +4,7 @@ class DeckContainer extends Component {
   constructor() {
     super()
     this.state = {
-      cards: []
+      decks: []
     }
   }
 
@@ -12,6 +12,10 @@ class DeckContainer extends Component {
     return(
       <h1>Deck Container</h1>
     )
+  }
+
+  componentDidMount() {
+    
   }
 }
 
