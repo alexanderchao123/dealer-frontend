@@ -9,8 +9,8 @@ class App extends Component {
     return(
       <Fragment>
         <Switch>
-          <Route path="/decks" component={DeckContainer}/>
-          <Route path="/" component={Home}/>
+          <Route path='/decks' component={DeckContainer}/>
+          <Route path='/' component={Home}/>
         </Switch>
       </Fragment>
     )

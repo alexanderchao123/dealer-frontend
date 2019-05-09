@@ -1,32 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import { Switch, Route } from 'react-router-dom';
+import DeckIndex from '../components/decks/DeckIndex'
+import DeckShow from '../components/decks/DeckShow'
 
 class DeckContainer extends Component {
-  constructor() {
-    super()
-    this.state = {
-      decks: []
-    }
-  }
-
   render() {
-    let decks = this.state.decks.map(deck => {
-      return <h1>{deck.id}</h1>
-    })
-
     return(
-      <div>
-        <h1>Deck Container</h1>
-        {decks}
-      </div>
+      <Fragment>
+        <Switch>
+          <Route path='/decks/:id' component={DeckShow}/>
+          <Route path='/decks' component={DeckIndex}/>
+        </Switch>
+      </Fragment>
     )
-  }
-
-  componentDidMount() {
-    fetch('http://localhost:3000/api/v1/decks')
-    .then(response => response.json())
-    .then(json => this.setState({
-      decks: [...json]
-    }))
   }
 }
 
