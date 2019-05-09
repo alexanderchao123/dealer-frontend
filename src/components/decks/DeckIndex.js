@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import DeckDisplay from './DeckDisplay'
+import DeckBody from './elements/DeckBody'
 
 class DeckIndex extends Component {
   constructor() {
@@ -10,48 +11,53 @@ class DeckIndex extends Component {
     }
   }
 
-  displayDecks = (deck, index) => {
-    return <DeckDisplay key={index} id={deck.id}/>
+  getDecksAPI = () => {
+    return fetch('http://localhost:3000/api/v1/decks')
   }
 
-  fetchDecks = () => {
-    fetch('http://localhost:3000/api/v1/decks')
-    .then(response => response.json())
-    .then(json => this.setState({decks: [...json]}))
+  loadDecks = () => {
+    this.getDecksAPI()
+    .then(res => res.json())
+    .then(decks => this.setState({decks: decks}))
   }
 
-  createDeck = () => {
-    fetch('http://localhost:3000/api/v1/decks', {
+  postDecksAPI = () => {
+    return fetch('http://localhost:3000/api/v1/decks', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
         Accepts: "application/json"
       }
     })
-    .then(response => response.json())
-    .then(json => {
-      let id = json.id
-      this.props.history.push(`/decks/${id}`)
-    })
   }
 
-  clickHandler = (event) => {
+  createDeck = () => {
+    this.postDecksAPI()
+    .then(res => res.json())
+    .then(deck => this.props.history.push(`/decks/${deck.id}`))
+  }
+
+  handleClick = (event) => {
     this.createDeck()
   }
 
+  displayDecks = (deck, index) => <DeckDisplay key={index} id={deck.id}/>
+
   componentDidMount() {
-    this.fetchDecks()
+    this.loadDecks()
   }
 
   render() {
     let decks = this.state.decks.map(this.displayDecks)
 
     return(
-      <div>
+      <DeckBody>
         <h1>Decks Index</h1>
         {decks}
-        <button type='button' onClick={this.clickHandler}>Create a Deck</button>
-      </div>
+        <button type='button' onClick={this.handleClick}>
+          Create a Deck
+        </button>
+      </DeckBody>
     )
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import DeckBody from './elements/DeckBody'
 import CardShow from '../cards/CardShow'
 
 class DeckShow extends Component {
@@ -30,11 +31,10 @@ class DeckShow extends Component {
 
   render() {
     return(
-      <div>
-        <h1>Deck Show</h1>
+      <DeckBody>
         {this.renderCards()}
         <button type='button' onClick={this.clickHandler}>Draw</button>
-      </div>
+      </DeckBody>
     )
   }
 }
