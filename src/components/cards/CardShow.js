@@ -1,14 +1,6 @@
 import React, { Component } from 'react'
 
 class CardShow extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     rank: props.card.rank,
-  //     suit: props.card.suit
-  //   }
-  // }
-
   render() {
     return(
       <div>
