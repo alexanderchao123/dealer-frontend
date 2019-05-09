@@ -20,22 +20,23 @@ class DeckIndex extends Component {
     .then(json => this.setState({decks: [...json]}))
   }
 
-  // createDeck = () => {
-  //   fetch('http://localhost:3000/api/v1/decks', {
-  //     method: 'POST',
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accepts: "application/json"
-  //     }
-  //   })
-  //   .then(response => response.json())
-  //   .then(json => {
-  //     this.props.history.push(`/decks/`)
-  //   })
-  // }
+  createDeck = () => {
+    fetch('http://localhost:3000/api/v1/decks', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        Accepts: "application/json"
+      }
+    })
+    .then(response => response.json())
+    .then(json => {
+      let id = json.id
+      this.props.history.push(`/decks/${id}`)
+    })
+  }
 
   clickHandler = (event) => {
-    
+    this.createDeck()
   }
 
   componentDidMount() {
