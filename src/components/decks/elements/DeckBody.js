@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledBody = styled.div`
   height: 100%;
-  background-image: radial-gradient(#2a603b, black);
+  background-image: radial-gradient(#1C8B0E, #16700B, #051702);
 `
 
 class DeckBody extends Component {

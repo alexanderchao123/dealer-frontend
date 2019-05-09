@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import DeckBody from './elements/DeckBody'
 import CardShow from '../cards/CardShow'
+import DeckButton from './elements/DeckButton'
+import DeckGridContainer from './elements/DeckGridContainer'
+import DeckGrid from './elements/DeckGrid'
+import { Grid, withStyles } from '@material-ui/core'
 
 class DeckShow extends Component {
   constructor(props) {
@@ -22,7 +26,11 @@ class DeckShow extends Component {
   }
 
   displayCards = (card, index) => {
-    return <CardShow key={index} card={card}/>
+    return(
+      <DeckGrid item xs={2} sm={2} md={2}>
+        <CardShow key={index} card={card}/>
+      </DeckGrid>
+    )
   }
 
   renderCards = () => {
@@ -32,8 +40,12 @@ class DeckShow extends Component {
   render() {
     return(
       <DeckBody>
-        {this.renderCards()}
-        <button type='button' onClick={this.clickHandler}>Draw</button>
+        <DeckGridContainer>
+          <DeckGrid item xs={1} sm={1} md={1}/>
+          {this.renderCards()}
+          <DeckGrid item xs={1} sm={1} md={1}/>
+        </DeckGridContainer>
+        <DeckButton onClick={this.clickHandler}>Draw Cards</DeckButton>
       </DeckBody>
     )
   }
