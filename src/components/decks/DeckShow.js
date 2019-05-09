@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import DeckBody from './elements/DeckBody'
+import DeckShowBody from './elements/DeckShowBody'
 import CardShow from '../cards/CardShow'
-import DeckButton from './elements/DeckButton'
+import DeckDrawButton from './elements/DeckDrawButton'
 import DeckGridContainer from './elements/DeckGridContainer'
 import DeckGrid from './elements/DeckGrid'
-import { Grid, withStyles } from '@material-ui/core'
 
 class DeckShow extends Component {
   constructor(props) {
@@ -39,14 +38,14 @@ class DeckShow extends Component {
 
   render() {
     return(
-      <DeckBody>
+      <DeckShowBody>
         <DeckGridContainer>
           <DeckGrid item xs={1} sm={1} md={1}/>
           {this.renderCards()}
           <DeckGrid item xs={1} sm={1} md={1}/>
         </DeckGridContainer>
-        <DeckButton onClick={this.clickHandler}>Draw Cards</DeckButton>
-      </DeckBody>
+        <DeckDrawButton onClick={this.clickHandler}>Draw Cards</DeckDrawButton>
+      </DeckShowBody>
     )
   }
 }

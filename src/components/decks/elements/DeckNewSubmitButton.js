@@ -17,13 +17,13 @@ const styles = {
   },
 }
 
-class DeckButton extends Component {
+class DeckNewSubmitButton extends Component {
   render() {
     const { classes } = this.props
     return(
       <Fragment>
         <Button {...this.props}
-          type="button"
+          type="submit"
           classes={{
             root: classes.root
           }}
@@ -33,4 +33,4 @@ class DeckButton extends Component {
   }
 }
 
-export default withStyles(styles)(DeckButton)
+export default withStyles(styles)(DeckNewSubmitButton)

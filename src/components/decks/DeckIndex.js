@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import DeckDisplay from './DeckDisplay'
-import DeckBody from './elements/DeckBody'
+import DeckShowBody from './elements/DeckShowBody'
 
 class DeckIndex extends Component {
   constructor() {
@@ -51,13 +51,13 @@ class DeckIndex extends Component {
     let decks = this.state.decks.map(this.displayDecks)
 
     return(
-      <DeckBody>
+      <DeckShowBody>
         <h1>Decks Index</h1>
         {decks}
         <button type='button' onClick={this.handleClick}>
           Create a Deck
         </button>
-      </DeckBody>
+      </DeckShowBody>
     )
   }
 }
