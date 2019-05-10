@@ -18,7 +18,13 @@ class DeckShow extends Component {
     let id = this.props.match.params.id
     fetch(`http://localhost:3000/api/v1/decks/${id}/draw`)
     .then(response => response.json())
-    .then(json => this.setState({cards: json}))
+    .then(json => {
+        if (json.length === 0) {
+          alert("There are no more cards left")
+        } else {
+          this.setState({cards: json})
+        }
+    })
   }
 
   clickHandler = (event) => {
@@ -27,8 +33,8 @@ class DeckShow extends Component {
 
   displayCards = (card, index) => {
     return(
-      <DeckGrid item xs={2} sm={2} md={2}>
-        <CardShow key={index} card={card}/>
+      <DeckGrid item xs={2} sm={2} md={2} key={index}>
+        <CardShow card={card}/>
       </DeckGrid>
     )
   }
@@ -41,11 +47,9 @@ class DeckShow extends Component {
     return(
       <DeckShowBody>
         <DeckShowWrapper>
-          <DeckGridContainer>
-          {this.renderCards()}
-          <DeckGrid item xs={12} sm={12} md={12}>
           <DeckDrawButton onClick={this.clickHandler}>Draw Cards</DeckDrawButton>
-          </DeckGrid>
+          <DeckGridContainer>
+            {this.renderCards()}
           </DeckGridContainer>
         </DeckShowWrapper>
       </DeckShowBody>

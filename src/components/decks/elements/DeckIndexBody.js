@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const StyledBody = styled.div`
   height: 100%;
   background-color: #FFFFFF;
+  text-align: center;
 `
 
 class HomeBody extends Component {

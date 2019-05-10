@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const StyledParagraph = styled.p`
   font-size: 22px;
-  /* width: 50%; */
 `
 
 class HomeParagraph extends Component {

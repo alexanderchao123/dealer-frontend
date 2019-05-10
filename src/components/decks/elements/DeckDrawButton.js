@@ -5,7 +5,7 @@ const styles = {
   root: {
     width: '350px',
     height: '45px',
-    margin: '5px 0px',
+    margin: '50px 0px',
     borderRadius: '0px',
     fontSize: '22px',
     fontWeight: '600',

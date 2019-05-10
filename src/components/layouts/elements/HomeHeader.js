@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledHeader = styled.h1`
   color: #1C8B0E;
-  margin-bottom: 25px;
+  margin: 50px 0px;
   font-size: 35px;
 `
 
