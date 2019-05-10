@@ -6,6 +6,7 @@ const styles = {
     maxWidth: '1000px',
     marginLeft: 'auto',
     marginRight: 'auto',
+    height: '250px',
   },
 }
 
