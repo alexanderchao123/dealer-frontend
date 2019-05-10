@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import HomeBody from './elements/HomeBody'
 
 class Home extends Component {
   render() {
     return(
-      <h1>Welcome to Deal-It</h1>
+      <HomeBody>
+        <h1>Welcome to Deal-It</h1>
+      </HomeBody>
     )
   }
 }

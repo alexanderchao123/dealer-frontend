@@ -12,8 +12,8 @@ const styles = {
   input: {
     height: '33px',
     padding: '5px 10px',
-    border: '1px solid #7C5CFF',
-    backgroundColor: 'white',
+    border: '1px solid #1C8B0E',
+    backgroundColor: '#FFFFFF',
   },
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import DeckHeader from './elements/DeckHeader'
 import DeckDisplay from './DeckDisplay'
-import DeckShowBody from './elements/DeckShowBody'
+import DeckIndexBody from './elements/DeckIndexBody'
 
 class DeckIndex extends Component {
   constructor() {
@@ -21,27 +21,7 @@ class DeckIndex extends Component {
     .then(decks => this.setState({decks: decks}))
   }
 
-  postDecksAPI = () => {
-    return fetch('http://localhost:3000/api/v1/decks', {
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-        Accepts: "application/json"
-      }
-    })
-  }
-
-  createDeck = () => {
-    this.postDecksAPI()
-    .then(res => res.json())
-    .then(deck => this.props.history.push(`/decks/${deck.id}`))
-  }
-
-  handleClick = (event) => {
-    this.createDeck()
-  }
-
-  displayDecks = (deck, index) => <DeckDisplay key={index} id={deck.id}/>
+  displayDecks = (deck, index) => <DeckDisplay key={index} deck={deck}/>
 
   componentDidMount() {
     this.loadDecks()
@@ -51,15 +31,12 @@ class DeckIndex extends Component {
     let decks = this.state.decks.map(this.displayDecks)
 
     return(
-      <DeckShowBody>
-        <h1>Decks Index</h1>
+      <DeckIndexBody>
+        <DeckHeader>Decks Index</DeckHeader>
         {decks}
-        <button type='button' onClick={this.handleClick}>
-          Create a Deck
-        </button>
-      </DeckShowBody>
+      </DeckIndexBody>
     )
   }
 }
 
-export default withRouter(DeckIndex)
+export default DeckIndex

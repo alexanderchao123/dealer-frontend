@@ -6,7 +6,7 @@ const StyledBody = styled.div`
   background-color: #FFFFFF;
 `
 
-class DeckNewBody extends Component {
+class HomeBody extends Component {
   render() {
     return(
       <StyledBody {...this.props}/>
@@ -14,4 +14,4 @@ class DeckNewBody extends Component {
   }
 }
 
-export default DeckNewBody
+export default HomeBody

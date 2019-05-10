@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import DeckNewBody from './elements/DeckNewBody'
+import DeckHeader from './elements/DeckHeader'
 import DeckNewFormWrapper from './elements/DeckNewFormWrapper'
 import DeckNewForm from './elements/DeckNewForm'
 import DeckNewInput from './elements/DeckNewInput'
@@ -50,6 +51,7 @@ class DeckNew extends Component {
       <DeckNewBody>
         <DeckNewFormWrapper>
           <DeckNewForm onSubmit={this.handleSubmit}>
+            <DeckHeader>Create A Deck</DeckHeader>
             <DeckNewInput
               type='text'
               name='name'
@@ -57,7 +59,7 @@ class DeckNew extends Component {
               placeholder='Name of Deck'
               onChange={this.handleChange}
             />
-            <DeckNewSubmitButton>Create Deck</DeckNewSubmitButton>
+            <DeckNewSubmitButton>Submit</DeckNewSubmitButton>
           </DeckNewForm>
         </DeckNewFormWrapper>
       </DeckNewBody>

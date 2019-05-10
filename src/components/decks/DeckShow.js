@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DeckShowBody from './elements/DeckShowBody'
+import DeckShowWrapper from './elements/DeckShowWrapper'
 import CardShow from '../cards/CardShow'
 import DeckDrawButton from './elements/DeckDrawButton'
 import DeckGridContainer from './elements/DeckGridContainer'
@@ -40,9 +41,7 @@ class DeckShow extends Component {
     return(
       <DeckShowBody>
         <DeckGridContainer>
-          <DeckGrid item xs={1} sm={1} md={1}/>
           {this.renderCards()}
-          <DeckGrid item xs={1} sm={1} md={1}/>
         </DeckGridContainer>
         <DeckDrawButton onClick={this.clickHandler}>Draw Cards</DeckDrawButton>
       </DeckShowBody>

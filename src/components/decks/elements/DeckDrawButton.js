@@ -3,13 +3,13 @@ import { Button, withStyles } from '@material-ui/core'
 
 const styles = {
   root: {
-    width: '100%',
+    width: '350px',
     height: '45px',
     margin: '5px 0px',
     borderRadius: '0px',
     fontSize: '22px',
     fontWeight: '600',
-    color: '#2A603B',
+    color: '#1C8B0E',
     backgroundColor: '#FFFFFF',
     '&:hover': {
       backgroundColor: '#FFFFFF',

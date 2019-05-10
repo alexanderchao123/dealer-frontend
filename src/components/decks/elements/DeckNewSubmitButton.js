@@ -9,10 +9,10 @@ const styles = {
     borderRadius: '0px',
     fontSize: '22px',
     fontWeight: '600',
-    color: '#2A603B',
-    backgroundColor: '#FFFFFF',
+    color: '#FFFFFF',
+    backgroundColor: '#1C8B0E',
     '&:hover': {
-      backgroundColor: '#FFFFFF',
+      backgroundColor: '#1C8B0E',
     },
   },
 }
