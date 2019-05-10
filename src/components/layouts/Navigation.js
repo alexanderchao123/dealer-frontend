@@ -13,7 +13,7 @@ class Navigation extends Component {
         <NavigationToolbar>
           <NavigationTypography>
             <NavigationList>
-              <NavigationLink to="/">Deal-it</NavigationLink>
+              <NavigationLink to="/">Deal-It</NavigationLink>
             </NavigationList>
           </NavigationTypography>
           <NavigationUnorderedList>

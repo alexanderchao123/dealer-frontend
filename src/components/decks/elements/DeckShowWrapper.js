@@ -5,7 +5,6 @@ const StyledWrapper = styled.div`
   flex-grow: 1;
 `
 
-
 class DeckShowWrapper extends Component {
   render() {
     return(

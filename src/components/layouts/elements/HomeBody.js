@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const StyledBody = styled.div`
   height: 100%;
+  text-align: center;
   background-color: #FFFFFF;
 `
 
