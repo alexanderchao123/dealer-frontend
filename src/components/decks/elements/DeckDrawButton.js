@@ -3,9 +3,9 @@ import { Button, withStyles } from '@material-ui/core'
 
 const styles = {
   root: {
-    width: '350px',
+    width: '300px',
     height: '45px',
-    margin: '50px 0px',
+    margin: '0px 0px 50px 0px',
     borderRadius: '0px',
     fontSize: '22px',
     fontWeight: '600',

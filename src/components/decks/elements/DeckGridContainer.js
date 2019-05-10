@@ -4,7 +4,8 @@ import { Grid, withStyles } from '@material-ui/core'
 const styles = {
   root: {
     maxWidth: '1000px',
-    margin: 'auto',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 }
 
