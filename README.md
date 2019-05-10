@@ -1,11 +1,15 @@
-## Available Scripts
+## Deal-It Frontend
 
-In the project directory, you can run:
+This is the frontend for Deal-It.
 
-### `npm start`
+## Run Instructions
+Note: Run the backend before running the frontend because the api is setup to call localhost:3000.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In the terminal:
+1. Clone the repository by typing ```git clone https://github.com/alexanderchao123/dealer-frontend.git```
+2. ```cd``` into the repository
+3. Run: ```npm install```
+5. Run: ```npm start```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Future Improvements
+Create a Sign Up and Sign In pages. Another improvement would be to add more styling to the DeckShow component, so that each card renders one at a time.

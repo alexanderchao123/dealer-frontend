@@ -40,12 +40,14 @@ class DeckShow extends Component {
   render() {
     return(
       <DeckShowBody>
-        <DeckGridContainer>
+        <DeckShowWrapper>
+          <DeckGridContainer>
           {this.renderCards()}
           <DeckGrid item xs={12} sm={12} md={12}>
-            <DeckDrawButton onClick={this.clickHandler}>Draw Cards</DeckDrawButton>
+          <DeckDrawButton onClick={this.clickHandler}>Draw Cards</DeckDrawButton>
           </DeckGrid>
-        </DeckGridContainer>
+          </DeckGridContainer>
+        </DeckShowWrapper>
       </DeckShowBody>
     )
   }
