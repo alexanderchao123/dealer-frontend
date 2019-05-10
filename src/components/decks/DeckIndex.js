@@ -38,10 +38,10 @@ class DeckIndex extends Component {
 
   displayDecks = (deck, index) => {
     const { classes } = this.props
-    return(<Paper className={classes.paper}>
+    return(<Paper key={index} className={classes.paper}>
         <Grid container wrap="nowrap" spacing={16}>
           <Grid item xs zeroMinWidth>
-            <DeckDisplay key={index} deck={deck}/>
+            <DeckDisplay deck={deck}/>
           </Grid>
         </Grid>
       </Paper>
@@ -54,6 +54,7 @@ class DeckIndex extends Component {
   render() {
     const { classes } = this.props
     let decks = this.state.decks.map(this.displayDecks)
+    console.log(this.state)
 
     return(
       <DeckIndexBody>

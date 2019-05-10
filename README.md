@@ -1,6 +1,6 @@
 ## Deal-It Frontend
 
-This is the frontend for Deal-It.
+This is the frontend for Deal-It. This application allows the consumer to create a deck of 52 cards and draw 5  cards at a time until the deck is empty. The consumer can also see the list of existing decks and go through it.
 
 ## Run Instructions
 Note: Run the backend before running the frontend because the api is setup to call localhost:3000
@@ -14,4 +14,4 @@ In the terminal:
 
 ## Future Improvements
 1. Create a Sign Up and Sign In pages.
-2. Use SVG instead of PNG files because the file size is smaller, scalable and faster load time.
+2. Use SVG instead of PNG files because the file sizes are significantly smaller and scalable.
