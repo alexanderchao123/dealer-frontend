@@ -3,13 +3,15 @@
 This is the frontend for Deal-It.
 
 ## Run Instructions
-Note: Run the backend before running the frontend because the api is setup to call localhost:3000.
+Note: Run the backend before running the frontend because the api is setup to call localhost:3000
 
 In the terminal:
-1. Clone the repository by typing ```git clone https://github.com/alexanderchao123/dealer-frontend.git```
+1. Before cloning this repo, setup the [backend](https://github.com/alexanderchao123/dealer-backend) first and follow the run instructions
+2. Clone the repository by typing ```git clone https://github.com/alexanderchao123/dealer-frontend.git```
 2. ```cd``` into the repository
 3. Run: ```npm install```
 5. Run: ```npm start```
 
 ## Future Improvements
-Create a Sign Up and Sign In pages. Another improvement would be to add more styling to the DeckShow component, so that each card renders one at a time.
+1. Create a Sign Up and Sign In pages.
+2. Use SVG instead of PNG files because the file size is smaller, scalable and faster load time.
