@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Grid, withStyles } from '@material-ui/core'
 
 const styles = {
-  root: {
+  item: {
     height: '100%',
   },
 }
@@ -15,7 +15,7 @@ class DeckGridContainer extends Component {
       <Fragment>
         <Grid {...this.props}
           item
-          className={classes.root}
+          className={classes.item}
         />
       </Fragment>
     )

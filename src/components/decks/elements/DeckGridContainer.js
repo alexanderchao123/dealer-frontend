@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Grid, withStyles } from '@material-ui/core'
 
 const styles = {
-  root: {
+  container: {
     maxWidth: '1000px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -20,7 +20,7 @@ class DeckGridContainer extends Component {
           container
           spacing={8}
           justify='center'
-          className={classes.root}
+          className={classes.container}
         />
       </Fragment>
     )
